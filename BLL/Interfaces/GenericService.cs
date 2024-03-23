@@ -26,4 +26,9 @@ public abstract class GenericService<T> : IService<T> where T : class
     {
         throw new NotImplementedException();
     }
+
+    public List<T> Get(int count)
+    { 
+        throw new NotImplementedException(); 
+    }
 }

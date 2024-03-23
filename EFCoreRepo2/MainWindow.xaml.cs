@@ -24,7 +24,8 @@ namespace EFCoreRepo2
         {
             InitializeComponent();
             _songService = new SongService();
-            dataGrid.ItemsSource = _songService.GetAll();
+            //dataGrid.ItemsSource = _songService.GetAll();
+            dataGrid.ItemsSource = _songService.Get(2);
         }
     }
 }

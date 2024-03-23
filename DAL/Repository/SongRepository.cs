@@ -20,6 +20,38 @@ public class SongRepository : GenericRepository<SongData>
             Author = author.Entity
         });
 
+        Add(new SongData
+        {
+            Title = "Song2",
+            Duration = 170,
+            Genre = "Pop",
+            Author = author.Entity
+        });
+
+        Add(new SongData
+        {
+            Title = "Song3",
+            Duration = 160,
+            Genre = "Pop",
+            Author = author.Entity
+        });
+
+        Add(new SongData
+        {
+            Title = "Song4",
+            Duration = 150,
+            Genre = "Pop",
+            Author = author.Entity
+        });
+
+        Add(new SongData
+        {
+            Title = "Song5",
+            Duration = 220,
+            Genre = "Pop",
+            Author = author.Entity
+        });
+
         _musicContext.SaveChanges();
     }
 

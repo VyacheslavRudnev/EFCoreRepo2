@@ -52,4 +52,21 @@ public class SongService : IService<Song>
     {
         _songRepository.Update(_mapper.Map<SongData>(item), id);
     }
+
+    public List<Song> Get(int count)
+    {
+        return _songRepository.Get(count)
+            .Select(s => new Song()
+            {
+                Id = s.Id,
+                Title = s.Title,
+                Duration = s.Duration,
+                Genre = s.Genre,
+                Author = new Author()
+                {
+                    Name = s.Author.Name,
+                }
+            })
+            .ToList();
+    }
 }
